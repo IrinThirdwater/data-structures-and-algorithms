@@ -26,5 +26,37 @@ public class Sort {
         }
         return array;
     }
+    
+    /**
+     * Return the same array of integers sorted in ascending order
+     * using selection sort.
+     *
+     * This method runs in O(array.length^2).
+     *
+     * @param array Array of integers to be sorted.
+     * @return Same array of integers sorted in ascending order.
+     */
+    public static int[] selectionSort (int[] array) {
+        /*
+            Selection sort partitions the list into (initially empty)
+            sorted sublist and another sublist containing the remaining
+            elements. Then it will pick the smallest element in the
+            'remaining' sublist and put it at the end of the sorted
+            sublist.
+         */
+        for (int remain = 0; remain < array.length - 1; remain++) {
+            int smallest = array[remain];
+            int smallestIndex = remain;
+            for (int i = remain + 1; i < array.length; i++) {
+                if (array[i] < smallest) {
+                    smallest = array[i];
+                    smallestIndex = i;
+                }
+            }
+            array[smallestIndex] = array[remain];
+            array[remain] = smallest;
+        }
+        return array;
+    }
 
 }
