@@ -117,6 +117,34 @@ class SortTest {
         assertArrayEquals(expectedDuplicates, Sort.insertionSort(arrayDuplicates));
     }
 
+    @Test void selectionSort0 () {
+        assertArrayEquals(expected0, Sort.selectionSort(array0));
+    }
+    @Test void selectionSort1 () {
+        assertArrayEquals(expected1, Sort.selectionSort(array1));
+    }
+    @Test void selectionSort2 () {
+        assertArrayEquals(expected2, Sort.selectionSort(array2));
+    }
+    @Test void selectionSortSorted () {
+        assertArrayEquals(expectedSorted, Sort.selectionSort(arraySorted));
+    }
+    @Test void selectionSortReverse () {
+        assertArrayEquals(expectedReverse, Sort.selectionSort(arrayReverse));
+    }
+    @Test void selectionSortRandom () {
+        assertArrayEquals(expectedRandom, Sort.selectionSort(arrayRandom));
+    }
+    @Test void selectionSortRandomBig () {
+        assertArrayEquals(expectedRandomBig, Sort.selectionSort(arrayRandomBig));
+    }
+    @Test void selectionSortConstant () {
+        assertArrayEquals(expectedConstant, Sort.selectionSort(arrayConstant));
+    }
+    @Test void selectionSortDuplicates () {
+        assertArrayEquals(expectedDuplicates, Sort.selectionSort(arrayDuplicates));
+    }
+
     private String arrayToString (int[] array) {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
