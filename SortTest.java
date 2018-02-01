@@ -66,29 +66,6 @@ class SortTest {
         arrayDuplicates = new int[]{4,9,4,-1,9,0,2,2,2,7,-1,0,3,4,7,0,7};
     }
 
-    @AfterEach void cleanTestArrays () {
-        array0 = null;
-        array1 = null;
-        array2 = null;
-        arraySorted = null;
-        arrayReverse = null;
-        arrayRandom = null;
-        arrayRandomBig = null;
-        arrayConstant = null;
-        arrayDuplicates = null;
-    }
-    @AfterAll static void cleanExpectedArrays () {
-        expected0 = null;
-        expected1 = null;
-        expected2 = null;
-        expectedSorted = null;
-        expectedReverse = null;
-        expectedRandom = null;
-        expectedRandomBig = null;
-        expectedConstant = null;
-        expectedDuplicates = null;
-    }
-
     @Test void insertionSort0 () {
         assertArrayEquals(expected0, Sort.insertionSort(array0));
     }
