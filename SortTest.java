@@ -89,7 +89,7 @@ class SortTest {
             return this.sortedArray;
         }
         public int[] testArray () {
-            return this.testArray;
+            return this.testArray.clone();
         }
         @Override public String toString () {
             return this.name;
