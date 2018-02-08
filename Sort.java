@@ -1,6 +1,26 @@
 public class Sort {
 
     /**
+     * Check whether the array of integers is sorted in ascending order.
+     *
+     * This method runs in O(array.length).
+     *
+     * @param array Array of integers to check for sortedness.
+     * @return Boolean stating whether or not the array is sorted in ascending order.
+     */
+    public static boolean isSorted (int[] array) {
+        int current = array[0];
+        for (int i : array) {
+            if (current <= i) {
+                current = i;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
      * Return the same array of integers sorted in ascending order
      * using insertion sort.
      *
@@ -13,7 +33,9 @@ public class Sort {
         /*
             Insertion sort partitions the list into (initially empty)
             sorted sublist and another sublist containing the remaining
-            elements.
+            elements. Then it will pick the first element in the
+            'remaining' sublist and put it in the right place in the
+            sorted sublist.
          */
         for (int remain = 1; remain < array.length; remain++) {
             int current = array[remain];
@@ -26,7 +48,6 @@ public class Sort {
         }
         return array;
     }
-    
     /**
      * Return the same array of integers sorted in ascending order
      * using selection sort.
@@ -58,5 +79,5 @@ public class Sort {
         }
         return array;
     }
-
+    
 }
